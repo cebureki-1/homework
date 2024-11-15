@@ -11,9 +11,10 @@
 
 
     <script>
+        // 1
         for (let i = 0; i < 5; i++) {
 
-            let input = prompt("Please enter the password:");
+            let input = prompt("Enter the password:");
 
             if (input == "amjilt_the_best") {
                 alert("you found the password! you not imposter");
@@ -22,6 +23,38 @@
                 alert("Too many attempts");
             }
         }
+
+        // 2
+
+        var i = 0;
+        while (i <= 5) {
+
+            let qwestion = prompt("Please enter the password:");
+
+            if (qwestion == "amjilt_the_best") {
+                alert("you found the password! you not imposter");
+                break;
+            } else if (i == 5) { // сонгы рет сурау ушын
+                alert("Too many attempts");
+            }
+            i++;
+        }
+
+        // 3
+        
+        var q = 1
+        do {
+            let qwestion1 = prompt("Please enter the password:");
+
+            if (qwestion1 == "amjilt_the_best") {
+                alert("you found the password! you not imposter");
+                break;
+            } else if (q == 5) { // сонгы рет сурау ушын
+                alert("Too many attempts");
+            }
+            q++;
+        } while (q <= 5);
+
     </script>
 </body>
 
