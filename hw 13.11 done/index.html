@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        //1
+
+        for (let i = 1; i <= 100; i++) {
+
+            if (i % 2 === 0) {
+                continue;
+            }
+
+            if (i % 3 === 0 && i % 5 === 0) {
+                console.log("FizzBuzz");
+            } else if (i % 3 === 0) {
+                console.log("Fizz");
+            } else if (i % 5 === 0) {
+                console.log("Buzz");
+            } else {
+                console.log(i);
+            }
+        }
+
+        //2
+
+        let score = 0;
+
+        let question1 = prompt("Қазақстандағы ең ірі көл қайсы?");
+        if (question1 === "Каспий теңізі" || question1 === "Каспий") {
+            score += 5;
+        } else {
+            score -= 1;
+        }
+
+        let question2 = prompt("HTML не үшін қолданылады?");
+        if (question2 === "Веб-бет жасау" || question2 === "Бет жасау") {
+            score += 5;
+        } else {
+            score -= 1;
+        }
+
+        let question3 = prompt("Қазақстанның ұлттық валютасы қалай аталады?");
+        if (question3 === "Теңге") {
+            score += 5;
+        } else {
+            score -= 1;
+        }
+
+        alert("Сіздің ұпайыңыз = " + score);
+
+        // 3
+
+        let start = Number(prompt(" Ведите началное значеня:"));
+        let end = Number(prompt("Ведите последнее значеня:"));
+
+        let Four = 1;
+        let Seven = 1;
+        let i = start;
+
+        do {
+            if (i % 4 === 0) {
+                Four *= i;
+            }
+            if (i % 7 === 0) {
+                Seven *= i;
+            }
+            i++;
+        } while (i <= end);
+
+        console.log(`4: ${Four}`);
+        console.log(`7: ${Seven}`);
+    </script>
+</body>
+
+</html>

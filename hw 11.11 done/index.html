@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // 1
+        let a = +prompt("a san enguz") 
+        let b = +prompt("b san enguz") 
+        let c = +prompt("c san enguz") 
+        
+        if (a + b > c, a + c > b, b + c > a) { 
+            alert("ushburish zhasai aladu") 
+        }else { 
+            alert("shasai almaidy") 
+        } 
+        
+        // 2 
+        var n = +prompt("num жаз");
+        var factorial = 1;
+
+        for(let i = 1; i <= n; i++){
+            factorial = factorial * i;
+        }
+        alert(factorial);
+        
+
+        // 3
+        for (let q = 1; q <= 3; q++) {
+            var point = +prompt("Баллынды жаз и содан ала алатын багалар \n                                         Критериый \n                                    90-100: Баға: А   \n                                    80-89: Баға: B  \n                                    70-79: Баға: C \n                                    60-69: Баға: D \n                                    0-59: Баға: F ");
+
+                switch (true) {
+                    case (score >= 90 && score <= 100):
+                        alert("Баға: A");
+                        break;
+                    case (score >= 80 && score <= 89):
+                        alert("Баға: B");
+                        break;
+                    case (score >= 70 && score <= 79):
+                        alert("Баға: C");
+                        break;
+                    case (score >= 60 && score <= 69):
+                        alert("Баға: D");
+                        break;
+                    case (score >= 0 && score <= 59):
+                        alert("Баға: F");
+                        break;
+                    default:
+                        alert("Белгісіз жағдай");
+                }
+        }
+    </script>
+</body>
+
+</html>
