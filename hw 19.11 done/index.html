@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Game() {
+            let i = 0;
+            const Number = 68;
+
+            while (i < 50) {
+
+                let guess = +prompt("1 мен 100 аралығындағы санды табыңыз:");
+
+                
+                if (guess < 1 || guess > 100) {
+                    alert("1 мен 100 аралығындағы санды енгізіңіз.");
+                continue;
+                }else if (i >= 5 && 50 >= i)  {
+                    if (guess < Number ) {
+                        alert("Құпия сан үлкенірек!");
+                    } else if (guess > Number) {
+                        alert("Құпия сан кішірек!");
+                    }else if(guess >= Number && guess <= Number){
+                        alert("Жарайсыз! Сіз құпия санды таптыңыз!");
+                    break;
+                }
+                }else if(guess >= Number && guess <= Number){
+                    alert("Жарайсыз! Сіз құпия санды таптыңыз!");
+                break;
+                }
+                i++;
+            }
+        }
+
+        Game();
+
+    </script>
+</body>
+
+</html>
