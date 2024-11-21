@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+         const difftotal = () =>{
+
+            let newmetr = 0;
+           
+    
+            while(true){
+
+            let jaz  = +prompt("num")
+            if (jaz == 0) break;
+
+            let val = prompt("val\n  KM/DSM/METR")
+            if (val == 0)break;
+
+                if (val == "KM"){
+                    newmetr += jaz * 1000
+                }
+
+                if (val == "DSM"){
+                    newmetr += jaz * 10000
+                }
+
+                if (val == "METR"){
+                    newmetr += jaz * 1
+                }
+                
+            }
+            
+            return newmetr
+            
+        }
+        
+        console.log(difftotal());
+
+
+</script>
+</body>
+</html>
