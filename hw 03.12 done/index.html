@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let kitap = {
+            title: "i can owner in you live i alredy NUMBER-1",
+            author: "kyanus sonbai",
+            pages: 300,
+            isRead: false,
+            toggleReadStatus: function() {
+                this.isRead =!this.isRead;
+                console.log(this.isRead ? "Оқу күйі жаңартылды: true." : "Оқу күйі жаңартылды: false.");
+            },
+            readbook: function(){
+                return `Сіз ${this.title} кітабын ${this.author} жазған оқып жатырсыз.`;
+            },
+        }   
+    
+        
+        kitap.toggleReadStatus();  // toggleReadStatus() function returns false and logs "book read"
+        console.log(kitap.readbook());  
+
+
+
+    </script>
+</body>
+</html>
