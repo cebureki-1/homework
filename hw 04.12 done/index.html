@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        const city = {
+
+            name: "Алматы",
+            population: 2000000,
+            districts: [
+                { name: "Бостандық", population: 300000 },
+                { name: "Алмалы", population: 250000 },
+            ],
+        };
+
+        console.log(city.districts.flatMap((num) => (num.population)))
+
+        const schools = [
+            {
+                name: "№1 мектеп",
+                district: "Алмалы",
+                students: 500
+            },
+            {
+                name: "№2 мектеп",
+                district: "Бостандық",
+                students: 700
+            },
+            {
+                name: "№3 мектеп",
+                district: "богеньбай батыры",
+                students: 1200
+            },
+        ];
+
+
+        function totalschools(schools){
+            let sum = 0;
+            schools.forEach(school => {
+                sum += school.students
+            });
+            return sum
+        }
+
+        console.log(totalschools(schools))
+
+    </script>
+</body>
+
+</html>
