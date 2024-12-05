@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // 1
+
+        // const object = {a: 1, b: 2, c: 3, d: 4}
+        // const {a, b, c, d} = object
+        // console.log(a + b + c + d)
+
+        // 2
+        // const obj1 = { a: 1, b: 2 }
+        // const obj2 = { c: 3, d: 4 }
+
+        // let totalObj = { ...obj1, ...obj2 }
+
+        // console.log(totalObj);
+        
+        // 3
+
+        students = [
+            { id: 1, name: "A1" },
+            { id: 2, name: "A2" },
+            { id: 3, name: "A3" },
+            { id: 4, name: "A4" },
+            { id: 5, name: "A5" }
+        ];
+
+        const tak = students.filter(st => st.id % 2 !== 0);
+        const jup = students.filter(st => st.id % 2 === 0);
+
+        console.log(`Тақ , ${tak}`);
+        console.log(`Жұп , ${jup}`);
+
+        //4 tapsyrma 
+
+        const library = {
+            name: 'kitaps',
+            books: [
+                { name: 'book A', pages: 300 },
+                { name: 'book B', pages: 100 },
+                { name: 'book C', pages: 340 },
+                { name: 'book D', pages: 1000 },
+            ],
+        };
+
+        let sum = 0;
+
+        library.books.forEach(book => {
+            sum += book.pages / library.books.length;;
+        });
+
+        console.log(sum);
+    </script>
+</body>
+
+</html>
