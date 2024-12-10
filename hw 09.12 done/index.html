@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        const library = {
+            name: 'Amjile',
+            address: 'Almaty',
+            books: [
+                { title: "ababi joli", author: "kurmangazy", year: 1840, isAvailable: true },
+                { title: "shokan omiri", author: "Shokan", year: 1999, isAvailable: true },
+                { title: "css html book", author: "Temulan agai", year: 1324, isAvailable: false }
+            ],
+            changeLibraryName: function (a) {
+                let Newname = prompt('Change  name');
+                return a.name = Newname;
+            },
+
+            changeLibraryAdress: function (a) {
+                let Newadress = prompt('Change adress');
+                return a.address = Newadress;
+            },
+
+            listAvailableBooks: function () {
+                if (library.isAvailable == true) {
+                    return 'can read it';
+                } else {
+                    return 'cant read it';
+                }
+            },
+
+            addBooks: function (a) {
+                let titles = prompt("plus title");
+                let authors = prompt("plus author");
+                let years = prompt("plus year");
+                let isAvaible = prompt("plus isAvaible");
+                return a.push({ title: titles, author: authors, yaer: years, isAvailable: isAvaible }) 
+            },
+
+            toggleBookAvailability: function () {
+                let teksery = prompt("enter brbale");
+
+                if (library.books.includes(teksery)) 
+
+                if (library.isAvailable == true) isAvailable = false;
+
+                if (library.isAvailable == false) {
+                    isAvailable = true;
+                     if (library.books.includes(teksery) == false) {
+                    console.log( "This book is not in the library");
+
+                }
+            }
+            
+        }
+        };
+        library.changeLibraryName(library);
+        library.changeLibraryAdress(library);
+        library.listAvailableBooks();
+        library.addBooks(library);
+        library.toggleBookAvailability();
+   
+        
+        console.log(library.listAvailableBooks());
+
+
+        console.log(library); 
+    </script>
+</body>
+
+</html>
