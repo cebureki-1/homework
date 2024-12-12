@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="body">
+    
+    <h1><strong> Java script окигалар</strong></h1>
+
+    <h4 id="deistvia-1">в этом обзаце иизменится текст</h4>
+    <button id="textexchange">изминение теста</button>
+
+    <br><br>
+
+    <button id="stytledesk">изминение цвета фона</button>
+    <br><br>
+    <div id="box" style="width: 200px; height: 100px; background-color: grey; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+        mouse
+    </div>
+    <br><br>
+    <button id="date">показать дату</button><button id="del">удалить</button>
+    <p id="Datethis"></p>
+
+    <script>
+        const text = document.querySelector("#deistvia-1")
+        const textexchanged = document.querySelector("#textexchange")
+        const stytle = document.querySelector("#stytledesk")
+        const date = document.querySelector("#date")
+        const datethis = document.querySelector("#Datethis")
+        const del = document.querySelector("#del")
+        const box = document.querySelector("#box")
+        const body = document.querySelector("#body")
+
+        const now = Date()
+        Date(now);
+
+        box.addEventListener('mouseenter', () =>{
+            box.style.color = 'red'
+        })
+
+        box.addEventListener('mouseleave', () =>{
+            box.style.color = 'white'
+        })
+        
+        
+        
+        textexchanged.addEventListener("click", () =>{
+            text.textContent = "sdsdsd  "
+        })
+
+        stytle.addEventListener("click", () =>{
+            body.style.background = 'blue'
+        })
+
+        box
+
+        date.addEventListener('click', () =>{
+            datethis.textContent = now
+        })
+        </script>
+</html>

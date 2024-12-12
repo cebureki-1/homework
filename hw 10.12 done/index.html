@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        width:100vw;
+        height: auto;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+</style>
+<body>
+    <h1 id="item-1" style="color: red;">Welcome</h1>
+    <p id="item-2"></p>
+    <span id="span" style="color: green"></span>
+    <br>
+    <button id="button" style="margin-top: 20px; padding: 5px; border-radius: 10px;">x</button>
+    <script>
+        let h1 = document.querySelector("#item-1")
+        h1.innerHTML = "Welcome to the world of dom"
+
+        let p = document.querySelector("#item-2")
+        p.innerHTML = "Did you know? Javascript can make webpges interactive.<br> learing the dom is your first step to web magic!"
+
+        let span = document.querySelector("#span")
+        span.innerHTML = "<em>Fun fact: DOM stands for document object model</em>"
+
+        let button = document.querySelector("#button")
+        button.innerHTML = "my name is imangali"
+        </script>
+</body>
+</html>
