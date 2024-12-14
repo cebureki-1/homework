@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Form story</h1>
+    
+        <span>Name: </span><input type="text"  id="name" placeholder="Enter your name">
+        <p id="Message-1"></p>
+        <button type="submit" id="send" >send</button>
+        <p id="Message-2"></p>
+
+    <script>
+        const message1 = document.querySelector("#Message-1")
+        const message2 = document.querySelector("#Message-2")
+        const send = document.querySelector("#send")
+        const names = document.querySelector("#name")
+
+        names.addEventListener('input', ()=>{
+            message1.textContent = "You Enter: " + names.value
+            return names.value
+        })
+
+        send.addEventListener("click", () =>{
+            message1.textContent = ""
+            message2.textContent = "you added: " + names.value
+            names.value= ""
+        })
+
+
+  
+    </script>
+</body>
+</html>
