@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    
+        <h1>Citys and his wither</h1>
+        <label for="">Enter you city:<input placeholder="You city:Almaty" type="text" name="" id="city"> <button
+                id="check">Check your wither</button></label>
+    <div id="container">            
+    </div>
+
+    <script>
+        const container = document.querySelector("#container")
+        const UpdateInfo = document.querySelector("#check")
+       
+
+        UpdateInfo.addEventListener('click', () => {
+             const city = document.querySelector("#city").value
+             const apiKey = 'fb2cff02b71168e9f0c68fd3f83d168a';
+             const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric&lang=kk`;
+            if (!city) {
+                container.innerHTML = 'Қала атауын енгізіңіз!';
+                return;
+            }
+
+            fetch(apiUrl)
+
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Қала табылмады!');
+                }
+                return response.json();
+            })
+                    .then(data => {
+                        container.innerHTML = `
+                        <p><strong>Қала:</strong> ${data.name}</p>
+                        <p><strong>Температура:</strong> ${data.main.temp}°C</p>
+                        <p><strong>Ауа райы:</strong> ${data.weather[0].description}</p>
+                    `;
+                    })
+                    .catch(error => {
+                        container.innerHTML = `<p style="color: red;">Қателік: ${error.message}</p>`;
+                    });
+        });
+    </script>
+</body>
+
+</html>
