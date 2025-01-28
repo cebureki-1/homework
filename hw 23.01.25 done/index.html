@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" placeholder="Enter name your film" name="" id="filmName">
+    <button id="filmCheck">Check film</button>
+    <div id="container">
+        <!-- js -->
+    </div>
+    <script>
+        const filmName = document.querySelector("#filmName");
+        const filmCheck = document.querySelector("#filmCheck");
+        const ApyKey = "https://67873274c4a42c916105d2fe.mockapi.io/api/onlineduken/films"
+        filmCheck.addEventListener("click", () => {
+            const film = filmName.value
+            fetchFilms(film);
+        })
+        async function fetchFilms(name) {
+            try {
+                const response = await fetch(ApyKey);
+                const films = await response.json();
+                console.log(films)
+                const foundFilm = films.find(film => film.filmName == name);
+
+                if (!foundFilm) {
+                    document.getElementById("container").innerHTML = "Фильм не найден";
+                } else {
+                    document.getElementById("container").innerHTML = `
+                    <img src='${foundFilm.image}' width="200"> </img>
+                    <h3>${foundFilm.filmName}</h3>
+                    `;
+                }
+            } catch (error) {
+                console.error(error);
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>
