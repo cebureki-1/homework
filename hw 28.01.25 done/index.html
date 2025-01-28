@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background-color: grey;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            width: 20%;
+            height: 25%;
+            background-color:blanchedalmond;
+            border-radius: 15%;
+            padding: 20px;
+        }
+        #text{
+            margin-bottom: 10px;
+            font-size: 20px;
+            border: none;
+            padding: 10px;
+            height: 90px;
+            border-radius: 5px;
+            width: 95%;
+            outline: none;
+            resize: none;
+            overflow: auto;
+            background-color:  greenyellow;
+        }
+        button{
+            margin-top: 10px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: greenyellow ;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+    <h1>Жазба сактау <br>косымшасы</h1>
+    <textarea type="text" placeholder="Enter Message" name="" id="comment"></textarea>
+    <button onclick="save()">Сактау</button>
+   
+    </div>
+    <script>
+        const textarea = document.getElementById("comment");
+        function save() {
+            let text = textarea.value;
+            if (text == "") return console.log("error")
+
+            const remove = localStorage.removeItem("local")
+            let localS = localStorage.setItem("local", text);
+
+            show()
+        }
+
+        function show() {
+            let localStext= localStorage.getItem("local")
+            textarea.textContent = localStext
+        }
+        show()
+    </script>
+</body>
+</html>
