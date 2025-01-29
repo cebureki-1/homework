@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>выбрат цвет</h1>
+    <label>Выбрать цвет:<input type="color" name="" id="color"></label><button onclick="Save()">Save</button><button onclick="Clear()">Clear</button>
+   <script>
+        const colorInput = document.getElementById('color');
+        const body = document.querySelector('body');
+         
+        function Save() {
+            const color = colorInput.value;
+            const sesion = sessionStorage.setItem('color', color);
+            alert("Good")
+            Show()
+        }
+
+        function Show() {
+            const color = sessionStorage.getItem('color');
+            body.style.backgroundColor = color
+        }
+        function Clear() {
+            alert("Clear")
+            sessionStorage.clear()
+            colorInput.value = '';
+            body.style.backgroundColor = 'white';
+        }
+        Show()
+    </script>
+</body>
+</html>
